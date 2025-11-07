@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tuukka Semi — Showreel & Portfolio</title>
+  <meta name="description" content="Tuukka Semi — suunnittelija (digi + print), työnjohtaja. Brändit, kampanjat, lehdet, signage, WordPress, AI & Python." />
+  <meta property="og:title" content="Tuukka Semi — Showreel & Portfolio" />
+  <meta property="og:description" content="Brändit, kampanjat, lehdet, signage, WP, AI & Python." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root {
+      --bg: #0b0e12; --fg: #e8eef5; --muted: #9fb2c7; --accent: #5aa0ff; --card: #12161d;
+      --ring: rgba(90,160,255,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { padding: 40px 0 20px; }
+    .title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: .3px; }
+    .subtitle { margin-top: 6px; color: var(--muted); }
+    .cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius: 12px; background: #1b2130; color: var(--fg); border: 1px solid #222a38; box-shadow: 0 0 0 0 var(--ring); transition: box-shadow .2s ease, transform .06s ease, background .2s ease; }
+    .btn:hover { background:#20283a; box-shadow: 0 0 0 6px var(--ring); transform: translateY(-1px); }
+    .btn.secondary { background: transparent; border-color:#293245; color: var(--fg); }
+
+    /* Video */
+    .video-card { margin-top: 28px; background: var(--card); border: 1px solid #1c2230; border-radius: 16px; overflow: hidden; }
+    .video-card header { padding: 16px 18px 10px; }
+    .video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background:#0b0e12; }
+    .video-embed iframe, .video-embed video { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+    /* Grid */
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 28px; }
+    .card { grid-column: span 12; background: var(--card); border: 1px solid #1c2230; border-radius: 16px; padding: 18px; }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 6px 0 10px; color: var(--muted); }
+    .card .tag { display:inline-block; font-size:12px; color:#c7d8ee; background:#182031; border:1px solid #27324a; padding:4px 8px; border-radius:999px; margin-right:6px; }
+    .card .links { margin-top: 6px; display:flex; gap:12px; flex-wrap:wrap; }
+
+    @media (min-width: 740px) {
+      .card { grid-column: span 6; }
+    }
+
+    footer { margin: 40px 0; padding-top: 16px; color: var(--muted); border-top: 1px solid #1c2230; }
+    .small { font-size: 13px; color: var(--muted); }
+    .note { margin-top: 10px; color: var(--muted); }
+    .muted { color: var(--muted); }
+    .contact { margin-top: 24px; display:flex; gap: 12px; flex-wrap: wrap; }
+    .kbd { font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#151a23; border:1px solid #263047; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">Tuukka Semi — suunnittelija (digi + print)</div>
+      <div class="subtitle">Brändit, kampanjat, lehdet, signage, WordPress, AI & Python • 8 v työnjohtajana (Helsingin kaupunki – Viestintäpaja)</div>
+      <div class="cta">
+        <!-- Päivitä tiedostopolut repoosi: korvaa ./polku.pdf → esim. ./Tuukka_Semi_CV.pdf -->
+        <a class="btn" href="./Tuukka_Semi_CV.pdf">Lataa CV (PDF)</a>
+        <a class="btn secondary" href="./Tuukka_Semi_Portfolio.pdf">Avaa portfolio (PDF)</a>
+        <a class="btn" href="#yhteys">Ota yhteyttä</a>
+      </div>
+    </header>
+
+    <section class="video-card" aria-label="Showreel">
+      <header>
+        <h2 style="margin:0">Showreel</h2>
+        <p class="small">60 s kooste: Uusix/Easton–Itis signage, Skribo-lehdet, Sattar-juliste, Pullokaveri, Aamurinki.</p>
+      </header>
+      <div class="video-embed">
+        <!-- VAIHTOEHTO A: YouTube (suositus). Korvaa YOUTUBE_ID omallasi. -->
+        <iframe src="https://www.youtube.com/embed/YOUTUBE_ID" title="Tuukka Semi — showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- VAIHTOEHTO B: Paikallinen MP4 (poista yllä oleva iframe ja poista kommentit alla). -->
+        <!--
+        <video controls playsinline poster="./poster.jpg">
+          <source src="./Tuukka_Semi_Showreel_60s.mp4" type="video/mp4" />
+          Selaimesi ei tue videon toistoa. Lataa video: <a href="./Tuukka_Semi_Showreel_60s.mp4">MP4</a>
+        </video>
+        -->
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top: 34px" aria-label="Projektit">
+      <article class="card">
+        <h3>Uusix / Easton–Itis — signage-loop</h3>
+        <p>Konsepti, typografia ja exportit portrait-näytöille (.mov + stillit). Toistettava sarja eri näyttökokoihin.</p>
+        <div class="links">
+          <a href="#" class="btn secondary">Still-esimerkkejä</a>
+          <a href="#" class="btn secondary">Case-sheet (PDF)</a>
+        </div>
+        <div class="tag">Signage</div> <div class="tag">Typografia</div> <div class="tag">Exportit</div>
+      </article>
+
+      <article class="card">
+        <h3>Skribo – lehtisarja</h3>
+        <p>Visuaalinen linja, taitto, kuvavalinnat ja paino-PDF (CMYK, bleedit). 10+ numeroa ilman korjauskierroksia.</p>
+        <div class="links">
+          <a href="#" class="btn secondary">Lehtinäytteet – kooste (PDF)</a>
+        </div>
+        <div class="tag">Lehdet</div> <div class="tag">Taitto</div> <div class="tag">CMYK</div>
+      </article>
+
+      <article class="card">
+        <h3>Sattar Fartousi — näyttelyjuliste</h3>
+        <p>Studiosessio + julistesuunnittelu (A4). Selkeä typografinen rakenne ja kuva, joka kantaa.</p>
+        <div class="links">
+          <a href="#" class="btn secondary">Juliste (PDF)</a>
+          <a href="#" class="btn secondary">Case-sheet (PDF)</a>
+        </div>
+        <div class="tag">Valokuvaus</div> <div class="tag">Juliste</div>
+      </article>
+
+      <article class="card">
+        <h3>Pullokaveri — brändi & UI-perusilme</h3>
+        <p>Logo, ikonit, värit ja some/store-pohjat. AI avuksi moodboardeihin ja versiointiin.</p>
+        <div class="links">
+          <a href="#" class="btn secondary">Logo & ikonit</a>
+        </div>
+        <div class="tag">Brändi</div> <div class="tag">UI</div> <div class="tag">AI</div>
+      </article>
+
+      <article class="card">
+        <h3>Aamurinki.app — identiteetti + AI-tekstiputki</h3>
+        <p>Yhtenäinen identiteetti ja some-pohjat. AI-tekstiputki nopeuttaa luonnoksia ja toistoa.</p>
+        <div class="links">
+          <a href="#" class="btn secondary">Pohjat / feed-esimerkit</a>
+        </div>
+        <div class="tag">Identiteetti</div> <div class="tag">Some</div> <div class="tag">AI</div>
+      </article>
+
+      <article class="card">
+        <h3>WordPress & julkaisu</h3>
+        <p>Gutenberg/lohkot, sivu- ja teemapohjat, perus-SEO (otsikot, metat, alt-tekstit), GA4/Tag Manager. Kuvien turvallinen korvaus (Enable Media Replace) tai blokin vaihto.</p>
+        <div class="links">
+          <a href="#" class="btn secondary">WP-työnäyte (screens)</a>
+        </div>
+        <div class="tag">WordPress</div> <div class="tag">SEO</div> <div class="tag">Analytics</div>
+      </article>
+    </section>
+
+    <section id="yhteys" style="margin-top: 40px;">
+      <h2>Yhteystiedot</h2>
+      <p class="muted">Lisätiedot ja lisänäytteet pyynnöstä (mm. signage-loop-video). Aloitus onnistuu 1.12.2025 tai sopimuksen mukaan.</p>
+      <div class="contact">
+        <!-- Korvaa tiedot omillasi -->
+        <a class="btn" href="mailto:etunimi.sukunimi@example.com">etunimi.sukunimi@example.com</a>
+        <span class="btn secondary">+358 4X XXX XXXX</span>
+        <span class="btn secondary">Savonlinna / Enonkoski</span>
+      </div>
+      <p class="note small">Vinkki: upota showreel YouTubeen (Unlisted) ja korvaa upotuksen YOUTUBE_ID. Lisää CV/Portfolio PDF:t samaan repo-kansioon ja päivitä linkit ylhäällä.</p>
+    </section>
+
+    <footer>
+      <div class="small">© Tuukka Semi — brändi, kampanjat, digi + print • WordPress • AI & Python</div>
+    </footer>
+  </div>
+</body>
+</html>
