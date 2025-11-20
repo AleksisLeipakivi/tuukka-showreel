@@ -51,6 +51,37 @@
     .muted { color: var(--muted); }
     .contact { margin-top: 24px; display:flex; gap: 12px; flex-wrap: wrap; }
     .kbd { font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#151a23; border:1px solid #263047; padding:2px 6px; border-radius:6px; }
+    .showreel-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 44rem;
+  margin: 0.5rem auto 0;
+  padding: 1rem 1.5rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.showreel-lead {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.showreel-placeholder ul {
+  margin: 0.25rem 0 0.5rem 1.2rem;
+}
+
+.showreel-placeholder li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.showreel-note {
+  opacity: 0.8;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
   </style>
 </head>
 <body>
@@ -74,7 +105,6 @@
       <div class="video-embed">
         <!-- VAIHTOEHTO A: YouTube (suositus). Korvaa YOUTUBE_ID omallasi. -->
        <div class="showreel-placeholder">
-  <h2>Showreel</h2>
   <p>
     60 sekunnin kooste brändeistä, kampanjoista ja printistä.
     Video on työn alla – tässä pääsisällöt:
