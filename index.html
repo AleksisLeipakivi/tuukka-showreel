@@ -102,41 +102,37 @@
   z-index: 0;
 }
     
-@keyframes spray-pulse {
+@keyframes border-pulse {
   0% {
     opacity: 0;
-    transform: scale(0.98);
   }
   50% {
     opacity: 1;
-    transform: scale(1.01);
   }
   100% {
     opacity: 0;
-    transform: scale(0.98);
   }
 }
 
-/* Vain kulmiin / reunoille tuleva, rikottu spray-glow */
+.card-highlight {
+  position: relative;
+  z-index: 0;
+}
+
+/* Hehku vain kortin ulkopuolella, sisus pysyy solidina */
 .card-highlight::before {
   content: "";
   position: absolute;
-  inset: -6px;              /* hyvin lähellä reunaa */
+  inset: 0;                 /* sama koko kuin kortilla */
   border-radius: inherit;
   pointer-events: none;
-  z-index: -1;
-
-  background:
-    radial-gradient(circle at 0%   0%,   rgba(90,160,255,0.35) 0 8%, transparent 24%),
-    radial-gradient(circle at 50%  0%,   rgba(90,160,255,0.20) 0 6%, transparent 22%),
-    radial-gradient(circle at 100% 0%,   rgba(90,160,255,0.35) 0 8%, transparent 24%),
-    radial-gradient(circle at 0%   100%, rgba(90,160,255,0.30) 0 7%, transparent 24%),
-    radial-gradient(circle at 50%  100%, rgba(90,160,255,0.18) 0 6%, transparent 22%),
-    radial-gradient(circle at 100% 100%, rgba(90,160,255,0.30) 0 7%, transparent 24%);
-
-  filter: blur(6px);        /* pehmentää “sprayksi” mutta ei täytä sisusta */
   opacity: 0;
-  animation: spray-pulse 7s ease-in-out infinite;
+
+  /* pseudo-elementti itsessään on "näkymätön" – vain varjo näkyy */
+  box-shadow:
+    0 0 30px 12px rgba(90,160,255,0.45);
+
+  animation: border-pulse 7s ease-in-out infinite;
 }
 
   </style>
