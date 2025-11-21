@@ -97,26 +97,48 @@
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
-    @keyframes pulse-card {
+   @keyframes spray-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(90, 160, 255, 0.0);
-    transform: translateY(0);
+    opacity: 0;
+    transform: scale(0.96);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(90, 160, 255, 0.22);
-    transform: translateY(-2px);
+    opacity: 1;
+    transform: scale(1.03);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(90, 160, 255, 0.0);
-    transform: translateY(0);
+    opacity: 0;
+    transform: scale(0.96);
   }
 }
 
 .card-highlight {
   position: relative;
-  animation: pulse-card 7s ease-in-out infinite;
+  z-index: 0;
 }
 
+/* Spray-tyylinen hengittävä reuna */
+.card-highlight::before {
+  content: "";
+  position: absolute;
+  inset: -8px;              /* kuinka kauas kortista hehku ulottuu */
+  border-radius: 20px;      /* samaa henkeä kortin kulmien kanssa */
+  pointer-events: none;
+  z-index: -1;
+
+  /* “Rikkoutunut” kehäreuna: useita läiskiä eri kohdissa */
+  background:
+    radial-gradient(circle at 10% 20%, rgba(90,160,255,0.45) 0, transparent 60%),
+    radial-gradient(circle at 85% 15%, rgba(90,160,255,0.35) 0, transparent 65%),
+    radial-gradient(circle at 15% 85%, rgba(90,160,255,0.35) 0, transparent 60%),
+    radial-gradient(circle at 90% 80%, rgba(90,160,255,0.45) 0, transparent 60%),
+    radial-gradient(circle at 50% 0%,  rgba(90,160,255,0.25) 0, transparent 70%),
+    radial-gradient(circle at 50% 100%,rgba(90,160,255,0.25) 0, transparent 70%);
+
+  filter: blur(4px);        /* pehmentää “sprayksi” */
+  opacity: 0;
+  animation: spray-pulse 7s ease-in-out infinite;
+}
 
   </style>
 </head>
